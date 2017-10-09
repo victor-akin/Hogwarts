@@ -14,8 +14,18 @@ define('USER', 'root');
 $project_path = '/Hogwarts/';
 
 define('PROJECT_ROOT', $project_path);
+define('PUBLIC_ROOT', $project_path.'Public/');
+
+// App
 define('APP_ROOT', __DIR__.'/../');
 define('VIEW', APP_ROOT.'Views/');
-define('PUBLIC_ROOT', $project_path.'Public/');
+
+// Public
 define('STYLE', PUBLIC_ROOT . 'css/');
 define('SCRIPT', PUBLIC_ROOT . 'js/');
+
+//Links
+define ('HOME', PROJECT_ROOT);
+
+
+//echo PROJECT_ROOT;

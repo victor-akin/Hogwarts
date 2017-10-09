@@ -36,7 +36,7 @@ class ApiController
 
             if (isset($names) && !empty($names)) {
                 foreach ($names as $key => $val) {
-                    echo " <a href= 'StudentDetails/$val'  >" .$key. "</a> <br>" ;
+                    echo " <a href= 'StudentDetails/$val' class='btn' >" .$key. "</a> <br>" ;
                 }
             }
         }

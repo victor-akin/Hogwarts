@@ -3,9 +3,16 @@ body {
     padding-right: 10%;
     padding-top: 2%;
 }
+.home {
+    height: 140px;
+    background-color:cornflowerblue;
+    box-shadow:rgba(0,0,0,0.3) 0 0px 4px
+}
+
 .search {
+    margin-top: 20px;
     width: 200px;
-    height: 200px;
+    height: 70px;
 }
 .display {
     float: right;
@@ -18,7 +25,4 @@ body {
 #text-search {
     border-bottom: 1px solid black;
     outline: none;
-}
-a {
-    text-decoration: none;
 }

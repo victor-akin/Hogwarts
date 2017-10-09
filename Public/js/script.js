@@ -4,6 +4,7 @@
 
 
 
+
 $('#text-search').keyup(function () {
     let input = $('#text-search').val();
     $.get("http://localhost/Hogwarts/Api", {'data': input}, function (data) {
@@ -14,4 +15,8 @@ $('#text-search').keyup(function () {
         });
 
 });
+
+
+
+
 

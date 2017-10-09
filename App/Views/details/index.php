@@ -1,9 +1,11 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: GBADEBO
- * Date: 04/10/2017
- * Time: 06:08 PM
- */
+<div class="page-header">
+    <h1>Student Details <small> <?php echo $this->name ;?> </small></h1>
+</div>
 
-echo 'students details';
+<div class="container">
+    <div class="col-md-12 ">
+        <p class="container">
+            <?php echo $this->offense ;?>
+        </p>
+    </div>
+</div>

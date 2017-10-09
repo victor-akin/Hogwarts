@@ -9,6 +9,8 @@
 namespace App\Controllers;
 
 use App\Core\Controller;
+use App\Classes\Students;
+use App\Classes\Offenses;
 
 class StudentDetailsController extends Controller
 {
@@ -19,14 +21,20 @@ class StudentDetailsController extends Controller
         parent::__construct();
     }
 
-    public function index($args)
+    public function index($args = '')
     {
-        $this->details($args);
+        $student = new Students($args);
+        $this->view->name = $student->name();
+
+        if($student->has_offense() > 0) {
+            $offense = new Offenses($args);
+            $this->view->offense = $offense->offense();
+        } else{
+            $this->view->offense = 'Clean Record';
+        }
+
+        $this->view->render('details/index');
     }
 
-    public function details($id)
-    {
-        $this->view->render('home/index');
-    }
 
 }

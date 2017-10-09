@@ -4,15 +4,13 @@
 
 ?>
 
-
+<header class="home"></header>
 <form action="" method="POST" class="search" >
     <div class="form-field">
-        <input type="text" name="search" id="text-search" value="">
+        <input type="text" name="search" id="text-search" value="" placeholder="Enter student's name">
     </div>
 
-    <div class="form-field">
-        <input type="submit" name="search" value="search">
-    </div>
+
 </form>
 
 <p>Possible Matches: </p>

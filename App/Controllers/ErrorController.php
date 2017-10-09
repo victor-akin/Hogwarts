@@ -20,6 +20,7 @@ class ErrorController extends Controller
     public function index()
     {
         $this->view->render('_errors/404');
+        die();
     }
 
 }
