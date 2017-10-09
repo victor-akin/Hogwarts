@@ -1,21 +1,30 @@
 <?php
 //    echo var_dump($_SERVER);
 
-
 ?>
+<div class="container-fluid">
 
-<header class="home"></header>
-<form action="" method="POST" class="search" >
-    <div class="form-field">
-        <input type="text" name="search" id="text-search" value="" placeholder="Enter student's name">
+    <div class="col-sm-12 col-md-12 main">
+        <h1 class="page-header">Dashboard</h1>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                </tr>
+
+                </tbody>
+
+            </table>
+             </div>
     </div>
 
 
-</form>
 
-<p>Possible Matches: </p>
-<div id="display">
-
-
-</div>
 

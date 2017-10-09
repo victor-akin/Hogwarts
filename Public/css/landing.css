@@ -3,14 +3,8 @@ body {
     padding-right: 10%;
     padding-top: 2%;
 }
-.home {
-    height: 140px;
-    background-color:cornflowerblue;
-    box-shadow:rgba(0,0,0,0.3) 0 0px 4px
-}
-
 .search {
-    margin-top: 20px;
+    margin-top: 10%;
     width: 200px;
     height: 70px;
 }
