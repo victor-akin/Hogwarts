@@ -6,18 +6,18 @@
             <div class="form-group">
                 <label for="nameField" class="col-xs-2">Name</label>
                 <div class="col-xs-10">
-                    <input type="text" class="form-control" id="nameField" placeholder="Your Name" />
+                    <input type="text" name="name" class="form-control" id="nameField" placeholder="Your Name" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="emailField" class="col-xs-2">Email</label>
                 <div class="col-xs-10">
-                    <input type="email" class="form-control" id="emailField placeholder="Your Email" />
+                    <input type="password" name="password" class="form-control" id="emailField"  placeholder="Your Password" />
                 </div>
             </div>
             <div class="col-xs-10 col-xs-offset-2">
                 <input type="submit" name="login" value="login" class="btn btn-primary"> </input>
-                <input type="submit" name="register" value="register" class="btn btn-primary"> </input>
+                <a href="register" ><input type="submit" name="register" value="register" class="btn btn-primary"> </input> </a>
             </div>
         </form>
 

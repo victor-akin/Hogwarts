@@ -21,12 +21,16 @@ class LoginController extends Controller
 
     public function index()
     {
+        $this->view->render('login/login');
 
         if(isset($_POST['login'])&& $_POST['login']  == 'login') {
             $login_user = new loginModel();
-           _redirect('student');
+            $data = [$_POST['name'], $_POST['password'] ];
+            $confirm = $login_user->login($data);
+            if($confirm) {
+                _redirect('student');
+            }
         }
-        $this->view->render('login/login');
     }
 
 }

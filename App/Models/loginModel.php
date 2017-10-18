@@ -21,6 +21,18 @@ class loginModel extends Model
     public function login($data)
     {
 
+        try{
+            $query = $this->db->query("SELECT name,token FROM admin WHERE name =:name", ['name' => $data[0]]);
+            $result = $query->fetch();
+            if(!empty($result->name) && $result->token === verify_pass($data[1])) {
+                return true;
+            }
+
+        }
+        catch (\Exception $e) {
+            var_dump($e);
+        }
+        return false;
     }
 
 }

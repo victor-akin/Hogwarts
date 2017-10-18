@@ -12,3 +12,7 @@ function _redirect($uri)
 }
 
 
+function verify_pass($password)
+{
+    return md5($password);
+}
