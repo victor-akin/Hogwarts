@@ -20,3 +20,10 @@ body {
     border-bottom: 1px solid black;
     outline: none;
 }
+.login-home {
+    height: 200px;
+    margin-top: 20%;
+}
+.login-form {
+
+}

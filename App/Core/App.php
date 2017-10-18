@@ -12,7 +12,7 @@ use App\Controllers\ErrorController;
 
 class App
 {
-    public $controller = 'student';
+    public $controller = 'login';
     public $method = 'index';
     public $args = [];
 

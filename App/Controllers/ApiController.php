@@ -28,15 +28,16 @@ class ApiController
             $query = $this->db->query("SELECT id,name FROM students WHERE name LIKE :name", ['name' => "%$data%"]);
             $name = $query->fetchAll();
 
+            //to get all names and respective id's in one array
             $names = [];
             for ($i = 0; $i < count($name); $i++) {
-                $names += [$name[$i]->name => $name[$i]->id] ;
+                $names += [$name[$i]->name => $name[$i]->id];
             }
 
 
             if (isset($names) && !empty($names)) {
                 foreach ($names as $key => $val) {
-                    echo " <a href= 'StudentDetails/$val' class='btn' >" .$key. "</a> <br>" ;
+                    echo " <tr><td>  <a href= 'StudentDetails/$val' class='btn' >" .$key. "</a>  </td></tr>  " ;
                 }
             }
         }

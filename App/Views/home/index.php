@@ -10,15 +10,12 @@
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
-                <tr>
-                    <th>Name</th>
-                </tr>
+                    <tr>
+                        <th>Name</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td></td>
-                </tr>
-
+                    <!--  intended output   -->
                 </tbody>
 
             </table>

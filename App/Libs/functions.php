@@ -8,7 +8,7 @@
 
 function _redirect($uri)
 {
-
+    echo "<script> document.title = 'Redirecting...'; window.location= '$uri'; </script>";
 }
 
 
