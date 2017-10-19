@@ -39,6 +39,27 @@ class loginModel extends Model
     public function register($data)
     {
 
+        if(  $this->exists('name', $data['name']) && $this->exists('email', $data['email']) ) {
+            // record exists already
+            return false;
+        }
+        elseif ($data['email'] != '' && $data['name'] != '') {
+            $data['token'] = md5($data['token']);
+            $insert = $this->db->insert('students', $data);
+            return true;
+        }
+    }
+
+    /*
+     * if $data exists in database return true
+     * else return false
+     */
+
+    public function exists($column, $data)
+    {
+        $query = $this->db->query("SELECT * FROM students WHERE $column =:record ", ['record' => $data]);
+        if($query->rowCount() > 0 ) return true;
+            return false;
     }
 
 }

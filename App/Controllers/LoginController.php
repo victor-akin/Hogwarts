@@ -34,9 +34,24 @@ class LoginController extends Controller
 
     public function register()
     {
+
         if(isset($_POST['register']) && $_POST['register']  == 'register') {
+            $register_user = new loginModel();
+            $data = [
+                        'name' => $_POST['name'],
+                        'email' => $_POST['email'],
+                        'token' => $_POST['password']
+                    ];
+            $register = $register_user->register($data);
+            if($register) {
+                _redirect(HOME);
+            }
+            else {
+                $this->view->msg = 'Record exists already';
+            }
 
         }
+
         $this->view->render('login/register');
     }
 

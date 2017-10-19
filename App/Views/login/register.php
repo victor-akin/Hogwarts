@@ -1,6 +1,9 @@
 <div class="login-home col-md-12 container">
     <div class="login-form col-md-6 col-md-offset-2" >
 
+        <div class="feedback">
+            <p> <?php if(isset($this->msg)) echo $this->msg; ?> </p>
+        </div>
 
         <form  method="post" class="form-horizontal">
             <div class="form-group">
