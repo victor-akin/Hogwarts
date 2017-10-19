@@ -25,6 +25,7 @@ class loginModel extends Model
             $query = $this->db->query("SELECT name,token FROM admin WHERE name =:name", ['name' => $data[0]]);
             $result = $query->fetch();
             if(!empty($result->name) && $result->token === verify_pass($data[1])) {
+                $_SESSION['bb752c7f1adbdd71be05b40bb9919f17'] = md5($result->name.$result->token);
                 return true;
             }
 
@@ -33,6 +34,11 @@ class loginModel extends Model
             var_dump($e);
         }
         return false;
+    }
+
+    public function register($data)
+    {
+
     }
 
 }

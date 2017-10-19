@@ -6,7 +6,7 @@
  * Time: 08:50 PM
  */
 
-
+session_start();
 
 
 require_once  ('App/Libs/consts.php');

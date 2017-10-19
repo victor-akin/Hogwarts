@@ -21,7 +21,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo HOME; ?>">Home</a></li>
+                <li><a href="<?php echo HOME; ?>login/logout">logout</a></li>
             </ul>
             <form class="navbar-form navbar-right">
                 <input type="text" class="form-control" placeholder="Enter student name" id="text-search">

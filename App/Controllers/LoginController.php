@@ -21,8 +21,6 @@ class LoginController extends Controller
 
     public function index()
     {
-        $this->view->render('login/login');
-
         if(isset($_POST['login'])&& $_POST['login']  == 'login') {
             $login_user = new loginModel();
             $data = [$_POST['name'], $_POST['password'] ];
@@ -31,6 +29,21 @@ class LoginController extends Controller
                 _redirect('student');
             }
         }
+        $this->view->render('login/index');
+    }
+
+    public function register()
+    {
+        if(isset($_POST['register']) && $_POST['register']  == 'register') {
+
+        }
+        $this->view->render('login/register');
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        _redirect(HOME);
     }
 
 }

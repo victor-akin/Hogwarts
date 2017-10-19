@@ -19,7 +19,7 @@ class App
     public function __construct()
     {
         $url = $this->__parseURL();
-
+//var_dump($url); die();
         $this->controller =$this->__loadController($url[0]);
         unset($url[0]);
         $url = array_values($url);
