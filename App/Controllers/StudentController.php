@@ -19,6 +19,9 @@ class StudentController extends Controller
         parent::__construct();
     }
 
+    /*
+     * rensers landing page after login
+     */
     public function index()
     {
         $this->view->render('home/index');

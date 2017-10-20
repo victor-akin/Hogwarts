@@ -19,6 +19,9 @@ class View
 
     }
 
+    /*
+     * page layout
+     */
     public function render ($view)
     {
         require_once (VIEW.'_includes/header.php');

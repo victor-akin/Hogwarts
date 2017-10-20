@@ -1,7 +1,3 @@
-<?php
-//    echo var_dump($_SERVER);
-
-?>
 <div class="container-fluid">
 
     <div class="col-sm-12 col-md-12 main">

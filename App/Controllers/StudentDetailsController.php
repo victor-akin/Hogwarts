@@ -21,6 +21,10 @@ class StudentDetailsController extends Controller
         parent::__construct();
     }
 
+    /*
+     * will fetch and deliver students details
+     * and offenses if any
+     */
     public function index($args = '')
     {
         $student = new Students($args);

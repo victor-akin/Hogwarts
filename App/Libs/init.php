@@ -10,9 +10,7 @@
 
 spl_autoload_register(function($classname) {
     $classname = preg_replace('/\\\/', '/', $classname);
-//    echo $classname; die();
+
     require_once ($classname.'.php') ;
 });
 
-//spl_autoload_extensions(".php");
-//spl_autoload_register();

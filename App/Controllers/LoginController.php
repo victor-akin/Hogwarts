@@ -32,6 +32,10 @@ class LoginController extends Controller
         $this->view->render('login/index');
     }
 
+    /*
+     * register new student only
+     *
+     */
     public function register()
     {
 

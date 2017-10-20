@@ -19,7 +19,7 @@ class App
     public function __construct()
     {
         $url = $this->__parseURL();
-//var_dump($url); die();
+
         $this->controller =$this->__loadController($url[0]);
         unset($url[0]);
         $url = array_values($url);
@@ -30,7 +30,7 @@ class App
         if(isset($url[0]))
             if($this->method === $url[0]) unset($url[0]);
         $this->args = array_values($url);
-//var_dump($this->args); die();
+
         call_user_func_array([$this->controller,$this->method],$this->args );
 
 

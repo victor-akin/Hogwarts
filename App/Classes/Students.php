@@ -17,6 +17,10 @@ class Students
     public $db;
     public $student;
 
+    /*
+     * constructs object with student id int $sID
+     * loads errorcontroller if student doesnt exist
+     */
     public function __construct($sID)
     {
         $this->sID = $sID;
@@ -29,11 +33,18 @@ class Students
         }
     }
 
+    /*
+     *returns student name
+     */
     public function name()
     {
         return $this->student->name;
     }
 
+    /*
+     * checks offense table if offenses
+     * exist for related student id
+     */
     public function has_offense ()
     {
         $offense = $this->db->query("SELECT student_id FROM offenses WHERE student_id = :id",['id' => $this->sID]);
